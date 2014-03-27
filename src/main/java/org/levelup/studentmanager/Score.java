@@ -25,6 +25,6 @@ public class Score {
     }
 
     public Score add(Score score) {
-        return new Score(this.value+ score.value);
+        return new Score(this.value + score.value);
     }
 }
