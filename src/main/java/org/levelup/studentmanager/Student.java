@@ -36,11 +36,11 @@ public class Student {
     }
 
     public Score getTotalScore() {
-        Score totalScore = new Score(0);
+        Integer totalValue = 0;
         for(Course course: courseList) {
-            totalScore.add(course.getScore());
+            totalValue += course.getScore().getValue();
         }
-        return totalScore;
+        return new Score(totalValue);
     }
 
     public void sitForCourseExams() {

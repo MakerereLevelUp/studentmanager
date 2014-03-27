@@ -27,4 +27,8 @@ public class Score {
     public Score add(Score score) {
         return new Score(this.value + score.value);
     }
+
+   public int getValue(){
+       return value;
+   }
 }

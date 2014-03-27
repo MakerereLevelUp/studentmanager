@@ -32,7 +32,7 @@ public class StudentTest {
     public void shouldGetTheCoursesOfferedByStudent() throws Exception {
         Student student = new Student("Emily", "209019847", true);
         student.sitForCourseExams();
-        assertThat(student.getTotalScore(), is(new Score(112)));
+        assertThat(student.getTotalScore(), is(new Score(212)));
 
     }
 }
