@@ -9,7 +9,7 @@ public class CourseTest {
     @Test
     public void shouldCreateCourse() throws Exception {
         Course course = new Course("Programming methodology", new Score(43));
-        assertThat("Programming methodology", is(course.makeCourse()));
+        assertThat("Programming methodology", is(course.getName()));
 
     }
 

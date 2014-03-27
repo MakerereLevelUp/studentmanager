@@ -10,7 +10,7 @@ public class Course {
     }
 
 
-    public String makeCourse() {
+    public String getName() {
         return name;
     }
 
