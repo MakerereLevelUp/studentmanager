@@ -10,27 +10,20 @@ public class StudentTest {
 
     @Test
     public void shouldHaveAttributesCreatedWith() {
-        Student student = new Student("Emily", "209019847", true);
+        Student student = new Student("Emily", "209019847");
         assertThat(student.getName(), is("Emily"));
         assertThat(student.getStudentNumber(), is("209019847"));
-        assertTrue(student.getIsResident());
     }
 
     @Test
     public void shouldGetOnlyTuitionIfNotResident() throws Exception {
-        Student student = new Student("Emily", "209019847", false);
+        Student student = new Student("Emily", "209019847");
         assertThat(student.getFees(), is(500000));
     }
 
     @Test
-    public void shouldReturnBothTuitionAndAccomodationFeeIfResident() throws Exception {
-        Student student = new Student("Emily", "209019847", true);
-        assertThat(student.getFees(), is(800000));
-    }
-
-    @Test
     public void shouldGetTheCoursesOfferedByStudent() throws Exception {
-        Student student = new Student("Emily", "209019847", true);
+        Student student = new Student("Emily", "209019847");
         student.sitForCourseExams();
         assertThat(student.getTotalScore(), is(new Score(212)));
 

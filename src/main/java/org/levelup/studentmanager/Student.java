@@ -4,18 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Student {
-    private static final int ACCOMMODATION_FEE = 300000;
-    private static final int TUITION = 500000;
+    protected static final Integer ACCOMMODATION_FEE = 300000;
+    protected static final Integer TUITION = 500000;
     private String name;
     private String studentNumber;
-    private boolean isResident;
     List<Course> courseList = new ArrayList<Course>();
 
 
-    public Student(String name, String studentNumber, boolean isResident) {
+    public Student(String name, String studentNumber) {
         this.name = name;
         this.studentNumber = studentNumber;
-        this.isResident = isResident;
     }
 
     public String getName() {
@@ -27,11 +25,10 @@ public class Student {
     }
 
     public boolean getIsResident() {
-        return isResident;
+        return false;
     }
 
-    public int getFees() {
-        if (isResident) return TUITION + ACCOMMODATION_FEE;
+    public Integer getFees() {
         return TUITION;
     }
 
